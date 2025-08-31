@@ -91,7 +91,7 @@ class Skyjo:
     def __str__(self):
         players_f_str = ''
         for i, player in enumerate(self.players):
-            players_f_str += f'Player_{i+1}:\nScore: {player['Score']}\nCards: {player['Cards']}\n\n'
+            players_f_str += f'Player_{i+1}{' (you)' if i == 0 else ''}:\nScore: {player['Score']}\nCards: {player['Cards']}\n\n'
 
         players_f_str = players_f_str[:-2] # removes last two \n's
         return f"player_count = {self.player_count}\n\n{players_f_str}"
